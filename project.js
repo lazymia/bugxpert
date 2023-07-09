@@ -46,7 +46,7 @@ function validate(event) { event.preventDefault(); }
       document.getElementsByTagName('input')[2]= inputConfirmPassword.style.borderColor = "red";
 
    }
-if(confirmPasswordError = true){
+if(confirmPasswordError = true && inputEmail.value != validRegex){
   document.getElementById("signupBtn").disabled = true;
   document.getElementById("signupBtn").style.opacity = "0.5";
 }

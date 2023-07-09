@@ -11,7 +11,7 @@ const waitingEngineers = [
             ' DevTools'
         ],
         "dateCreated" : "Jun 5, 2022, 10:12:29 AM",
-        "menu": [
+        "action": [
             `<div>
             <button>View</button>
         
@@ -31,7 +31,7 @@ const waitingEngineers = [
             ' DevTools'
         ],
         "dateCreated" : "2015",
-        "menu": [     `<div>
+        "action": [     `<div>
         <button>View</button>
         <button>Approve</button>
         </div>`
@@ -47,7 +47,7 @@ const waitingEngineers = [
         ' DevTools'
     ],
     "dateCreated" : "2015",
-    "menu": [     `<div>
+    "action": [     `<div>
     <button>View</button>
 
     <button>Approve</button>
@@ -64,7 +64,7 @@ const waitingEngineers = [
         ' DevTools'
     ],
     "dateCreated" : "2015",
-    "menu": [     `<div>
+    "action": [     `<div>
     <button>View</button>
 
     <button>Approve</button>
@@ -81,7 +81,7 @@ const waitingEngineers = [
         ' DevTools'
     ],
     "dateCreated" : "2015",
-    "menu": [     `<div>
+    "action": [     `<div>
     <button>View</button>
 
     <button>Approve</button>

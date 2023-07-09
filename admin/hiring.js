@@ -7,7 +7,7 @@ const companies = [
         "description": "Google Inc Development company",
         "industry": "Information Technology",
         "dateCreated" : "2015",
-        "menu": [ `<div>
+        "action": [ `<div>
         <button>View</button>
     
         <button>Approve</button>
@@ -20,7 +20,7 @@ const companies = [
     "description": "Google Inc Development company",
     "industry": "Information Technology",
     "dateCreated" : "2015",
-    "menu": [ `<div>
+    "action": [ `<div>
     <button>View</button>
 
     <button>Approve</button>
@@ -33,7 +33,7 @@ const companies = [
     "description": "Google Inc Development company",
     "industry": "Information Technology",
     "dateCreated" : "2015",
-    "menu": [ `<div>
+    "action": [ `<div>
     <button>View</button>
 
     <button>Approve</button>
@@ -46,7 +46,7 @@ const companies = [
     "description": "Google Inc Development company",
     "industry": "Information Technology",
     "dateCreated" : "2015",
-    "menu": [ `<div>
+    "action": [ `<div sty>
     <button>View</button>
 
     <button>Approve</button>

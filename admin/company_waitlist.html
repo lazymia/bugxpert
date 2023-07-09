@@ -18,66 +18,85 @@
         }
 
     table, th, td {
-        border: 1px solid black;
         border-collapse: collapse;
+        border: 1px solid lightgrey;
+  }
+  th{
+    color: cornflowerblue;
   }
   table{
-    width: 100%;
-
+    width: 90%;
+    height: 200px;
+    margin-left: 5rem;
   }
-
+tr{
+    border-radius: 10px;
+    text-align: center;
+}
 .menu{
     display: flex;
 }
+#company-waitlist-search{
+    width: 30%;
+    height: 3rem;
+    border:1px solid rgb(160, 158, 158) !important;
+    margin: 3rem;
+    font: 12px;
+}
     </style>
-    <!-- CSS -->
+
 </head>
 
 <body>
-    <!-- <header>
-        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
-    </header>
-    <button style="border-radius: 5px 5px 5px 5px; padding: 0.5em; margin-bottom: 1rem;"><a href="/admin/admin_dashboard.html"><i class="fa fa-arrow-left" aria-hidden="true"> Back</i></a></button> -->
-    <div class="admin-dashboard">
-        <aside>
-        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
-            <ul class="dashboard-sidebar">
-                <li><a href="/">Dashboard Overview</a></li>
-                <div id="account-tag">Account</div>  
-                <span style="font-size: 13px;">&nbsp;&nbsp;Waitlist</span>          
-                <li><a href="/admin/company_waitlist.html">Hiring Companies</a></li>
-                <li><a href="/">Software QA Engineers</a></li>
+        <div class="admin-dashboard">
+            <aside>
+            <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+                <ul class="dashboard-sidebar">
+                    <li><a href="/">Dashboard Overview</a></li>
+                    <div id="account-tag">Account</div>  
+                    <span style="font-size: 13px;">&nbsp;&nbsp;Waitlist</span>          
+                    <li><a href="/admin/company_waitlist.html">Hiring Companies</a></li>
+                    <li><a href="/">Software QA Engineers</a></li>
+    
+                    <span style="font-size: 13px;">&nbsp;&nbsp;Active</span>          
+                    <li><a href="/">Hiring Companies</a></li>
+                    <li><a href="/">Software QA Engineers</a></li>
+    
+                    <div id="transaction-tag">Transactions</div>              
+                    <li><a href="/">Inflow - Companies</a></li>
+                    <li><a href="/">Outflow - Engineers</a></li>
+    
+                    <div id="transaction-tag">Revenue</div>              
+                    <li><a href="/">Commission</a></li>
+    
+                </ul>
+            </aside>
+            <div style="width: 100%;">
+                <table>
+                    <input type="search" id="company-waitlist-search" placeholder="search...">  
+              
+                    <tr>
+                            <th>#</th>
+                            <th>Company Name</th>
+                            <th>Description</th>
+                            <th>Industry</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                    </tr>
+                    <tbody id="companies-table-body"></tbody>
+                  </table>
+            </div>
 
-                <span style="font-size: 13px;">&nbsp;&nbsp;Active</span>          
-                <li><a href="/">Hiring Companies</a></li>
-                <li><a href="/">Software QA Engineers</a></li>
-
-                <div id="transaction-tag">Transactions</div>              
-                <li><a href="/">Inflow - Companies</a></li>
-                <li><a href="/">Outflow - Engineers</a></li>
-
-                <div id="transaction-tag">Revenue</div>              
-                <li><a href="/">Commission</a></li>
-
-            </ul>
-        </aside>
-        <table>
-            <tr>
-                    <th>S/N</th>
-                    <th>Company Name</th>
-                    <th>Description</th>
-                    <th>Industry</th>
-                    <th>Date</th>
-                    <th>Menu</th>
-            </tr>
-            <tbody id="companies-table-body"></tbody>
-          </table>
-    </div>
- 
+        </div>
+    
+   
+    <!-- </div> -->
+   
+  
 
       <script src="./hiring.js"></script>
       <script>
-        const companiesBodyRow = companies.map(({ companyName, description, industry, dateCreated, menu}, index) => `
+        const companiesBodyRow = companies.map(({ companyName, description, industry, dateCreated, action}, index) => `
   <tr>
      <td>${index + 1}</td>
 
@@ -85,7 +104,7 @@
      <td> ${description}</td>
      <td> ${industry}</td>
      <td> ${dateCreated}</td>
-     <td> ${menu}</td>
+     <td> ${action}</td>
    </tr>
 `
 )

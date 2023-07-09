@@ -41,7 +41,7 @@
 
     <table>
         <tr>
-                <th>S/N</th>
+                <th>#</th>
                 <th>First Name</th>
                 <th> Last Name</th>
                 <th>QA Tools</th>
@@ -53,7 +53,7 @@
 
 <script src="./engineer_waitlist.js"></script>
       <script>
-        const engineerBodyRow = waitingEngineers.map(({ firstName, lastName, qaTools, dateCreated, menu}, index) => `
+        const engineerBodyRow = waitingEngineers.map(({ firstName, lastName, qaTools, dateCreated, action}, index) => `
   <tr>
      <td>${index + 1}</td>
 
@@ -61,7 +61,7 @@
      <td> ${lastName}</td>
      <td> ${qaTools}</td>
      <td> ${dateCreated}</td>
-     <td> ${menu}</td>
+     <td> ${action}</td>
    </tr>
 `
 )
