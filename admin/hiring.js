@@ -1,5 +1,4 @@
 
-
 const companies = [
     {
         "id": 1,
@@ -35,7 +34,6 @@ const companies = [
     "dateCreated" : "2015",
     "action": [ `<div>
     <button>View</button>
-
     <button>Approve</button>
     </div>`
 ]

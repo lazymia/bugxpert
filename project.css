@@ -157,16 +157,13 @@ div #account-tag, #transaction-tag{
     margin-bottom: 2rem;
 }
 .dashboard{
-    /* width: 75%; */
     width: auto;
-    /* display: flex; */
     margin-left: 5em; 
     padding-top: 4em;
 }
 
 .fa-building, .fa-list-alt, .fa-bug, .fa-pause{
     width: 50%;
-    /* height: 50px; */
     color: rgb(208, 198, 198);
     font-size: x-large;
     text-align: center;
@@ -204,10 +201,7 @@ div #account-tag, #transaction-tag{
     border-radius: 5px 5px 5px 5px;
     box-shadow: 5px 5px 5px 5px rgb(218, 215, 215) ;
 }
-/* .commission-received{
-    margin-top: 2em;
-    display:inline-block;
-} */
+
 #inflow, #commission-received{
         font-size: 20px;
 }
@@ -220,12 +214,8 @@ div #account-tag, #transaction-tag{
     margin-top: 2em;
     height: 300px;
     border: 1px solid gray;
-    /* text-align: center; */
     justify-content: center;
 }
 
-
-
-/* Company waitlist */
 
   
