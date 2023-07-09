@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="html" href="/admin/admin_dashboard.html">
+    <!-- <link rel="stylesheet" href="/project.css"> -->
+    <link rel="stylesheet" href="/project.query.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer Waitlist</title>
+
+    <!-- CSS -->
+    <style>
+    body{
+        margin: 2em;
+        font-family: poppins;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+  }
+  table{
+    width: 100%;
+
+  }
+
+.menu{
+    display: flex;
+}
+    </style>
+    <!-- CSS -->
+</head>
+
+<body>
+    <header>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+    </header>
+    <button style="border-radius: 5px 5px 5px 5px; padding: 0.5em; margin-bottom: 1rem;"><a href="/admin/admin_dashboard.html"><i class="fa fa-arrow-left" aria-hidden="true"> Back</i></a></button>
+
+    <table>
+        <tr>
+                <th>S/N</th>
+                <th>First Name</th>
+                <th> Last Name</th>
+                <th>QA Tools</th>
+                <th>Date Created</th>
+                <th>Menu</th>
+        </tr>
+        <tbody id="engineers-table-body"></tbody>
+      </table>
+
+<script src="./engineer_waitlist.js"></script>
+      <script>
+        const engineerBodyRow = waitingEngineers.map(({ firstName, lastName, qaTools, dateCreated, menu}, index) => `
+  <tr>
+     <td>${index + 1}</td>
+
+      <td>${firstName}</td>
+     <td> ${lastName}</td>
+     <td> ${qaTools}</td>
+     <td> ${dateCreated}</td>
+     <td> ${menu}</td>
+   </tr>
+`
+)
+
+const waitlistEngineerTBody =  document.querySelector("tbody#engineers-table-body")
+waitlistEngineerTBody.innerHTML = engineerBodyRow.join("")
+console.log(waitlistEngineerTBody);
+      </script>
+    <script src="/project.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

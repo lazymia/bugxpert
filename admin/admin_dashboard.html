@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="html" href="/admin/company_waitlist.html">
+    <link rel="stylesheet" href="/project.css">
+    <link rel="stylesheet" href="/project.query.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <aside>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+            <ul class="dashboard-sidebar">
+                <li><a href="/">Dashboard Overview</a></li>
+                <div id="account-tag">Account</div>  
+                <span style="font-size: 13px;">&nbsp;&nbsp;Waitlist</span>          
+                <li><a href="/admin/company_waitlist.html">Hiring Companies</a></li>
+                <li><a href="/">Software QA Engineers</a></li>
+
+                <span style="font-size: 13px;">&nbsp;&nbsp;Active</span>          
+                <li><a href="/">Hiring Companies</a></li>
+                <li><a href="/">Software QA Engineers</a></li>
+
+                <div id="transaction-tag">Transactions</div>              
+                <li><a href="/">Inflow - Companies</a></li>
+                <li><a href="/">Outflow - Engineers</a></li>
+
+                <div id="transaction-tag">Revenue</div>              
+                <li><a href="/">Commission</a></li>
+
+            </ul>
+        </aside>
+        <div class="dashboard">
+            <div class="dasboard-header">
+                <div class="company-waitlist" id="waitlist-active">
+                    <div><i class="fa fa-pause"></i></div>
+                    <span>Company Waitlist</span>     
+                    <div id="hiring-num"> </div>
+                </div>
+                <div class="engineer-waitlist" id="waitlist-active">
+                    <div><i class="fa fa-list-alt"></i></div>
+                    <span>Engineer Waitlist</span>
+                    <div id="engineer-num">  </div>
+                </div>
+                <div class="active-companies" id="waitlist-active">
+                    <div><i class="fa fa-building"></i></div>
+                    <span>Active Companies</span>
+                    <div>25 </div>
+                </div>
+                <div class="active-engineers" id="waitlist-active">
+                    <div ><i class="fa fa-bug"></i></div>
+                    <span>Active Engineers</span>
+                    <div>48 </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="inflow">
+                    <i class="fa fa-arrow-down"aria-hidden="true"></i>
+                    <div><h4>Inflow</h4></div>
+                    (<i class="fa fa-usd" aria-hidden="true"></i>) <div id="inflow"></div>
+                </div>
+                <div class="outflow">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    <div><h4>Outflow</h4></div>
+                    (<i class="fa fa-usd" aria-hidden="true"></i>) <div id="outflow"></div>
+                </div>
+
+                <div class="commission-received">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    <div><h4>Commission</h4></div>
+                    (<i class="fa fa-usd" aria-hidden="true"></i>)<div id="commission-received"></div>
+                </div>
+              
+            </div>
+            <div class="graph">
+                <div>
+                Number of Outsourced QA/month
+                <p>Graph coming soon!</p>
+                </div>
+                <div class="graph-container"></div>
+            </div>
+        </div>
+
+    </div>
+   
+    <script>
+        let inflow = document.getElementById('inflow').innerHTML = 10560;
+        let outflow = document.getElementById('outflow').innerHTML = 7500;
+        let commissionReceived = document.getElementById("commission-received").innerHTML = inflow - outflow
+        
+
+      
+  
+
+
+    </script>
+    <script src="./engineer_waitlist.js"></script>
+    <script src="./hiring.js"></script>
+    <script>
+        const companiesCount = companies.length;
+        const companiesCountWrap = document.querySelector("div#hiring-num")
+        console.log(companiesCountWrap)
+
+        companiesCountWrap.innerText = companiesCount;
+
+        const engineerCount =waitingEngineers.length;
+        const engineerCountWrap = document.querySelector("div#engineer-num")
+        //console.log(companiesCountWrap)
+
+        engineerCountWrap.innerText = engineerCount;
+    </script>
+    <script src="/project.js"></script>
+    
+</body>
+</html>

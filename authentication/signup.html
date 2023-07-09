@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/project.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="/project.query.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <div class="signup-container">
+<!-- 50% of the screen -->
+<div class="signup">
+    <header>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+    </header>
+    <div class="signup-form">
+        <span style="font-style:italic ;">See things from the bug side of view...</span>
+        <h2>Sign Up to BugXpert</h2>
+        <form action="" method="">
+            <div id="email-container" style="white-space:nowrap">
+                <label for="email" >Email&nbsp;&nbsp;</label><br>
+                <input type="email"onkeyup="validate()" name="email" id="email-input" placeholder="example@email.com"><i class="fa fa-envelope icon"></i>
+                <div id="email-error"></div>
+            </div>
+
+            <div id="password-container">
+                <br>
+                <label for="password">Password&nbsp;&nbsp;</label><br>
+                <input type="password" onkeyup="validate()" onkeyup= "verifyPassword()"name="password" id="password-input" placeholder="........" ><i class="fa fa-eye icon"></i>
+                <div id="password-error"></div>
+            </div>
+
+            <div id="confirm-password-container">
+                <br>
+                <label for="confirmpassword">Confirm password&nbsp;&nbsp;</label><br>
+                <input type="password" onkeyup="validate()" name="confirmpassword" id="confirm-password-input" placeholder="........" >
+                <div id="confirm-password-error"></div>
+            </div>
+
+            <select>
+                <option selected disabled>Who are you?</option>
+                <option>I am a Software QA</option>
+                <option>I'm looking to hire a Software QA</option>
+            </select><br>
+            <label for="check"><input type="checkbox" name="check" id="tandc">I have read the terms and conditions</label>
+            <br>
+            <button type="submit" onclick="submitSignup()" id="signupBtn">Sign Up</button>
+        </form>
+        <span id="social-signin">Have an account? <a href="/authentication/login.html">Login</a></span>
+        
+        <!-- <div id="social-media">
+           
+            <div id="facebook">
+                <i class="fa fa-facebook icon"></i>
+            </div>
+            <div id="google">
+                <i class="fa fa-google icon"></i>
+            </div>
+            <div id="apple">
+                <i class="fa fa-apple icon"></i>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- 50% of the screen -->
+<div class="signup-image">
+    <img src="/images/4957136_4957136.jpg" alt="signup imagery" srcset="">
+</div>
+        </div>
+        
+
+    <script src="/project.js"></script>
+
+    </body>
+
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+
+</html>

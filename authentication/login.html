@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/project.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="stylesheet" href="/project.query.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+
+
+    </head>
+
+    <body>
+        <div class="signup-container">
+            
+<!-- 50% of the screen -->
+<div class="signup">
+    <header>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+    </header>
+    <div class="signup-form">
+        <span style="font-style:italic ;">See things from the bug side of view...</span>
+        <h2>Login to BugXpert</h2>
+        <form action="" method="" id="login-form">
+            <div id="email-container" style="white-space:nowrap">
+                <label for="email" >Email&nbsp;&nbsp;</label><br>
+                <input type="email" name="email" id="login-email-input" placeholder="example@email.com"><i class="fa fa-envelope icon"></i>
+                <div id="email-error"></div>
+            </div>
+            <div id="password-container">
+                <br>
+                <label for="password">Password&nbsp;&nbsp;</label><br>
+                <input type="password" name="password" id="login-password-input" placeholder="........" ><i class="fa fa-eye icon"></i>
+                <div id="password-error"></div>
+            </div>
+            <br>
+            <button type="submit" onclick="submitLogin()" id="loginBtn">Login</button>
+        </form>
+        <span id="social-signin">Don't have an account yet? <a href="/authentication/signup.html" target="/"><i>Sign up</i></a></span>
+        
+    </div>
+</div>
+<!-- 50% of the screen -->
+<div class="signup-image">
+    <img src="/images/4957136_4957136.jpg" alt="signup imagery" srcset="">
+</div>
+        </div>
+        
+
+    <script src="/project.js"></script>
+ <script>
+    function submitLogin(){
+    let  login = document.getElementById("login-form");
+    login.addEventListener('submit', handleLogin);
+    function handleLogin(event) { event.preventDefault(); } 
+
+let userName = document.getElementById("login-email-input");
+
+const data = {
+    user: userName.value,
+    myData(){
+      alert( `Hello ${this.user}` );
+    }
+}
+console.log(data.myData());
+
+}
+ </script>
+    </body>
+
+    <footer>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="html" href="/admin/admin_dashboard.html">
+    <link rel="stylesheet" href="/project.css">
+    <link rel="stylesheet" href="/project.query.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/929725966a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Waitlist</title>
+
+    <!-- CSS -->
+    <style>
+    body{
+        margin: 2em;
+        font-family: poppins;
+        }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+  }
+  table{
+    width: 100%;
+
+  }
+
+.menu{
+    display: flex;
+}
+    </style>
+    <!-- CSS -->
+</head>
+
+<body>
+    <!-- <header>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+    </header>
+    <button style="border-radius: 5px 5px 5px 5px; padding: 0.5em; margin-bottom: 1rem;"><a href="/admin/admin_dashboard.html"><i class="fa fa-arrow-left" aria-hidden="true"> Back</i></a></button> -->
+    <div class="admin-dashboard">
+        <aside>
+        <span><h1><span style="color:red">Bug</span>Xpert</h1></span>
+            <ul class="dashboard-sidebar">
+                <li><a href="/">Dashboard Overview</a></li>
+                <div id="account-tag">Account</div>  
+                <span style="font-size: 13px;">&nbsp;&nbsp;Waitlist</span>          
+                <li><a href="/admin/company_waitlist.html">Hiring Companies</a></li>
+                <li><a href="/">Software QA Engineers</a></li>
+
+                <span style="font-size: 13px;">&nbsp;&nbsp;Active</span>          
+                <li><a href="/">Hiring Companies</a></li>
+                <li><a href="/">Software QA Engineers</a></li>
+
+                <div id="transaction-tag">Transactions</div>              
+                <li><a href="/">Inflow - Companies</a></li>
+                <li><a href="/">Outflow - Engineers</a></li>
+
+                <div id="transaction-tag">Revenue</div>              
+                <li><a href="/">Commission</a></li>
+
+            </ul>
+        </aside>
+        <table>
+            <tr>
+                    <th>S/N</th>
+                    <th>Company Name</th>
+                    <th>Description</th>
+                    <th>Industry</th>
+                    <th>Date</th>
+                    <th>Menu</th>
+            </tr>
+            <tbody id="companies-table-body"></tbody>
+          </table>
+    </div>
+ 
+
+      <script src="./hiring.js"></script>
+      <script>
+        const companiesBodyRow = companies.map(({ companyName, description, industry, dateCreated, menu}, index) => `
+  <tr>
+     <td>${index + 1}</td>
+
+      <td>${companyName}</td>
+     <td> ${description}</td>
+     <td> ${industry}</td>
+     <td> ${dateCreated}</td>
+     <td> ${menu}</td>
+   </tr>
+`
+)
+
+const companiesTBody =  document.querySelector("tbody#companies-table-body")
+companiesTBody.innerHTML = companiesBodyRow.join("")
+console.log(companiesTBody);
+      </script>
+    <script src="/project.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
