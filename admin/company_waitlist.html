@@ -96,7 +96,8 @@ tr{
 
       <script src="./hiring.js"></script>
       <script>
-        const companiesBodyRow = companies.map(({ companyName, description, industry, dateCreated, action}, index) => `
+        function companiesOperations(companyList){
+            const companiesBodyRow = companyList.map(({ companyName, description, industry, dateCreated}, index) => `
   <tr>
      <td>${index + 1}</td>
 
@@ -104,14 +105,27 @@ tr{
      <td> ${description}</td>
      <td> ${industry}</td>
      <td> ${dateCreated}</td>
-     <td> ${action}</td>
+     <td> <div>
+        <button>View</button>
+    
+        <button>Approve</button>
+        </div>
+    </td>
    </tr>
 `
 )
-
 const companiesTBody =  document.querySelector("tbody#companies-table-body")
 companiesTBody.innerHTML = companiesBodyRow.join("")
-console.log(companiesTBody);
+        }
+        companiesOperations(companies)
+
+document.querySelector('input#company-waitlist-search').addEventListener('change', (e)=> {
+    const searchInput = e.target.value
+   const filteredCompany =  companies.filter(company => searchInput ? company.companyName === searchInput : true)
+
+   companiesOperations(filteredCompany)
+})
+
       </script>
     <script src="/project.js"></script>
     <script>
